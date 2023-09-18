@@ -1,0 +1,1000 @@
+@font-face {
+    font-family: "CheekyChic";
+    font-weight: 400;
+    src: local("Quaxcite"),
+        url("/Fonts/CheekyChic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Futura";
+    font-weight: 400;
+    src: local("Futura"),
+        url("/Fonts/futura medium bt.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Gore";
+    font-weight: 400;
+    src: local("Gore"),
+        url("/Fonts/Gore Regular.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "Balgin";
+    font-weight: 400;
+    src: local("Balgin"),
+        url("/Fonts/Balgin Bold Italic.ttf") format("truetype");
+  }
+body {
+  margin: 0;
+  background-color: #00aade;
+  overflow-x: hidden;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 1vw;
+  height: 7vh;
+  
+}
+.current a {
+    font-size: 1.9vw !important;
+    border-bottom: solid #fff 0.4vw;
+}
+
+.links-container {
+    width: 68%;
+    align-self: center;
+    position: absolute;
+    top: 5%;
+    left: 51%;
+    transform: translateX(-50%);
+    display: flex;
+    
+    justify-content: space-between;
+   
+}
+.header img {
+    width: 4vw;
+    padding: 20%;
+}
+.header a:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+.header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.7vw;
+    font-family: 'Gore';
+
+}
+.layeredImages img {
+    position: absolute;
+    width: 48%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.layeredImages {
+    width: 100%; /* Adjust as necessary */
+    height: 100%; /* Adjust as necessary */
+    transition: transform 0.1s; /* Adjust as necessary for smoother transitions */
+    transform-style: preserve-3d;
+  }
+  
+
+
+.mainBody {
+  height: 90vh; /* Adjust as needed */
+  perspective: 1000px;
+}
+.about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.aboutLeft {
+    width: 60%;
+    height: 100%;
+   
+    position: relative;
+}
+.aboutLeftText {
+    position: absolute;
+    height: 40%;
+    width: 80%;
+    right: 0;
+    top: 25%;
+    
+}
+.aboutLeft h2 {
+    font-family: 'Futura' ;
+    color: #fff;
+    font-size: .85vw;
+    overflow-wrap: break-word;
+  hyphens: auto;
+  text-align: justify;
+  padding-bottom: 1%;
+    width: 80%;
+}
+.aboutLeft h1 {
+    font-family: 'Gore';
+    color: white;
+    font-size: 6vw;
+    font-weight: 100;
+    height: 3vw;
+    transform: scaleY(1.1);
+}
+.aboutRight {
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+.aboutRight img {
+    position: absolute;
+    width: 100%;
+    right: 10%;
+    top:15%;
+}
+.collection {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    perspective: 1000px;
+    flex-direction: row;
+}
+.collectionRight {
+    width: 50%;
+    height: 100%;
+    
+    position: relative;
+}
+.collectionLeft img {
+    width: 100%;
+    
+   
+}
+.collectionImage {
+    position: absolute;
+    top: 15%;
+    left:20%;
+   
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
+}
+
+.collectionLeft {
+    width: 45%;
+    perspective: 1000px;
+    height: 100%;
+    position: relative;
+    
+}
+
+.collectionRight h1 {
+    font-family: 'Gore';
+    color: white;
+    font-size: 4vw;
+    font-weight: 100;
+    height: 2vw;
+}
+.collectionRight h2 {
+    font-family: 'Futura';
+    font-size: .9vw;
+    color: #fff;
+    overflow-wrap: break-word;
+  hyphens: auto;
+  text-align: justify;
+  width: 80%;
+}
+.collectionText {
+  
+    position: absolute;
+    top: 30%;
+}
+.me-links a:hover {
+    transform: scale(1.05);
+}
+.me-links img {
+    width: 15.5vw
+}
+.me-links {
+    margin-top: 3%;
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+
+}
+ 
+  .chapters {
+    height: 120vh;
+    
+  }
+  .chaptersMid {
+    height: 27%;
+  }
+  .chaptersHead {
+    width: 60%;
+    padding-left: 17% ;
+  }
+  .chaptersHead h1 {
+    font-family: 'Gore';
+    color: #FFF;
+    font-size: 5vw;
+    font-weight: 100;
+    height: 6vh;
+  }
+  .chaptersHead h2 {
+    font-size: 0.8vw;
+    width: 50%;
+    color: #fff;
+    overflow-wrap: break-word;
+  hyphens: auto;
+  text-align: justify;
+    font-family: 'Futura';
+  }
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes rotateAndDraw {
+    0% {
+      transform: rotate(-40deg);
+      stroke-dashoffset: 314;
+    }
+    100% {
+      transform: rotate(360deg);
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes dotFadeIn {
+    to {
+      fill-opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes checkFadeIn {
+    0% {
+      background-color: #fff;
+    }
+    90% {
+      background-color: #fff;
+    }
+    100% {
+        background-color: #00dd93;
+        border: solid #00f9ed 0.16vw;
+    }
+  }
+  .chaptersBottom h1 {
+    animation: fadeIn 1s forwards;
+  }
+  
+  .chaptersBottom ul.customList li {
+    animation: slideDown 0.3s forwards;
+  }
+  
+  .line1, .circle1, .line2, .circle2 {
+    animation: draw 0.5s forwards cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+  
+  .line1 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation-delay: 0s;
+  }
+  
+  .circle1 {
+    stroke-dasharray: 1000; /* Half the circumference for half a circle */
+    stroke-dashoffset: 628; 
+    animation-delay: 0.5s;
+    transform-origin: 68% 50%;
+    transform: rotate(-3deg);
+    animation-name: rotateAndDraw;
+    animation-duration: 0.5s;
+  }
+  
+  .line2 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation-delay: 1s;
+  }
+  
+  .circle2 {
+    stroke-dasharray: 1000; /* Half the circumference for half a circle */
+    stroke-dashoffset: 628; 
+    animation-delay: 1.5s;
+    transform: rotate(-3deg);
+    transform-origin: 25% 50%;
+    animation-name: rotateAndDraw;
+    animation-duration: 0.5s;
+  }
+  
+  .dot2 {
+    fill-opacity: 0;
+    animation: dotFadeIn 1s forwards;
+    animation-delay: 2s;
+  }
+  .line1, .circle1, .line2, .circle2, .dot2 {
+    animation-play-state: paused;
+  }
+  
+  .in-view .line1, 
+  .in-view .circle1, 
+  .in-view .line2, 
+  .in-view .circle2, 
+  .in-view .dot2 {
+    animation-play-state: running;
+  }
+  ul.customList {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  ul.customList li {
+    position: relative;
+    padding-left: 8%;
+    font-family: 'CheekyChic';
+    font-size: 1.6vw;
+    color: white;
+    margin-bottom: 1.1%;
+  }
+  
+  ul.customList li.whiteDot::before {
+    content: '';
+    position: absolute;
+    left: 1.2%;
+    top: 50%;
+    width: 1vw;
+    height: 1vw;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  
+  ul.customList li.greenCheck::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 1%;
+    color: white;
+    height: 2vh;
+    width: 2vh;
+    font-size: 1.2vw;
+    line-height: .8vw;
+    font-family: 'Futura' !important;
+    transform: translateY(-50%);
+    transition: background-color 0.5s 1s;
+    animation: checkFadeIn 8s forwards;
+  }
+  .fade-in {
+    
+  }
+  .chaptersBottom {
+    width: 100%;
+    display: flex;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    flex-direction: row;
+    margin-top: -1.5%;
+    padding-left: 17%;
+  }
+  .chaptersBottomLeft {
+    width: 30%;
+    align-items: flex-end;
+    
+ 
+
+  }
+  .chaptersBottomRight {
+    width: 30%;
+    align-items: flex-start;
+    margin-left: 9%;
+   
+  }
+  .chaptersBottomRight h3 {
+    background-color: white;
+    font-size: 66%;
+    width: 80%;
+    border-radius: 5vw;
+    color: transparent;
+  }
+  .chaptersBottom h1 {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .chaptersBottom ul.customList li {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .chaptersBottom h1 {
+    color: #fff;
+    font-family: 'Gore';
+    font-weight: 100;
+    font-size: 2.8vw;
+  }
+  .scroll-to-top img {
+    width: 3vw;
+  }
+  .scroll-to-top button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .scroll-to-top img:hover {
+    transform: scale(1.1);
+  }
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: transparent; 
+    transform: rotate(180deg);
+    color: #fff;
+    transition: opacity 1s;
+    cursor: pointer;
+    z-index: 1000; /* Ensures the button remains above other elements */
+  }
+
+.links-container.open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjust as necessary */
+  z-index: 9999;
+  height: 120vh;
+  flex-direction: column;
+  transition: left 2s ease-in-out; 
+  background-color: rgba(54, 54, 54, 0.551);
+  backdrop-filter: blur(10px);
+ 
+  
+}
+  
+.hamburger {
+  display: none;
+  font-size: 10vh;
+  margin-top: 3vh;
+  margin-right: -14vw;
+  cursor: pointer;
+}
+ 
+  
+  /* Adding transition for smooth color change on hover */
+  .scroll-to-top {
+    transition: background-color 0.3s;
+  }
+  .connected {
+    width: 100%;
+    height: 40vh;
+    padding-top: 5%;
+    text-align: center;
+  }
+  .connected-text h1 {
+    font-family: 'Gore';
+    color: #fff;
+    font-weight: 100;
+    font-size: 5vw;
+
+  }
+  .connected-text h2 {
+    overflow-wrap: break-word;
+  hyphens: auto;
+  text-align: justify;
+  margin: 0 auto; 
+  width: 45%;
+  margin-top: -2.5%;
+  font-family: 'Futura';
+  font-size: 1vw;
+  color: white;
+  }
+  .socials {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    justify-content: space-evenly;
+    width: 12%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  .chaptersMidMobile {
+    display: none;
+  }
+  .socials a:hover {
+transform: scale(1.05);
+  }
+  .socials img {
+    width: 5vh;
+   
+  }
+  .footer {
+    position: relative;
+    height: 87vh;
+  }
+  .footer img {
+    width: 45%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .scroll-button {
+    display: none;
+  }
+  .footerBottom {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    z-index: -1;
+    height: 9vh;
+    background-color: #0072d8;
+  }
+  .footerText {
+position: absolute;
+right: 5%;
+top: 10%
+  }
+  .links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footerText h2 {
+    font-family: 'Balgin';
+    height: .2vh;
+    font-size: 1vw;
+    color: white;
+  
+  }
+  .footerLogo {
+    position: relative;
+   
+  }
+  .footerLogo img {
+    width: 3.5%;
+    margin-left: 47.5%;
+    margin-bottom: -4.2%;
+  }
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+      z-index: 99999;
+    }
+    
+    .links-container.open {
+      display: flex;
+    }
+    .links-container {
+      display: none;
+      transition: transform 1s ease-in-out;
+      transform: translateX(-200%);
+    }
+    .links-container.open {
+      display: flex;
+      padding-bottom: 10vh;
+      padding-top: 10vh;
+     animation: slideIn 1s forwards;
+    }
+    .links-container.open a{
+      font-size: 6vh !important;
+    
+    }
+    .current a {
+      font-size: 7vh !important;
+      border-bottom: solid #fff 1.5vh;
+    }
+    @keyframes slideIn {
+      to {
+        transform: translateX(0);
+      }
+      
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 40%;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .header img {
+      width: 12vh;
+      padding: 20%;
+  }
+ .layeredImages {
+  position: absolute;
+  width: 100%;
+ }
+  .layeredImages img {
+    position: absolute;
+    width: 115%;
+    left: 58%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+.scroll-button {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  width: 27vw;
+  cursor: pointer;
+  z-index: 1000;
+}
+.scroll-button img {
+  width: 10vh !important;
+  height: 10vh;
+}
+.mainBody {
+  height: 90vh; /* Adjust as needed */
+  width: 100%;
+  perspective: 1000px;
+}
+.scroll-to-top {
+  display: none;
+}
+
+.scroll-button img.rotate-180 {
+  transform: rotate(180deg);
+}
+.about {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.aboutLeft {
+  width: 100%;
+  height: 50%;
+ 
+  position: relative;
+}
+.aboutLeftText {
+  position: absolute;
+  height: 40%;
+  width: 85%;
+  right: -10%;
+  top: 25%;
+  
+}
+.aboutLeft h2 {
+  font-family: 'Futura' ;
+  color: #fff;
+  font-size: 1.4vh;
+  overflow-wrap: break-word;
+hyphens: auto;
+text-align: justify;
+padding-bottom: 1%;
+  width: 80%;
+}
+.aboutLeft h1 {
+  font-family: 'Gore';
+  color: white;
+  font-size: 9vh;
+  font-weight: 100;
+  height: 4vh;
+  margin-top: 5vh;
+  transform: scaleY(1.1);
+}
+.aboutRight {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.aboutRight img {
+  position: absolute;
+  width: 100%;
+  left: 8%;
+  top: 25%;
+}
+.collection {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  margin-top: 15%;
+  perspective: 1000px;
+  flex-direction: column;
+}
+.collectionRight {
+  width: 30%;
+  height: 50%;
+  margin-left: 18%;
+  position: relative;
+}
+.collectionLeft img {
+  width: 50vh;
+
+  
+ 
+}
+.collectionImage {
+  position: absolute;
+  top: 30%;
+  left:15%;
+ 
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+}
+
+.collectionLeft {
+  width: 45%;
+  perspective: 1000px;
+  height: 100%;
+  position: relative;
+  
+}
+
+.collectionRight h1 {
+  font-family: 'Gore';
+  color: white;
+  font-size: 5vh;
+  font-weight: 100;
+  height: 3vh;
+}
+.collectionRight h2 {
+  font-family: 'Futura';
+  font-size: 1.1vh;
+  color: #fff;
+  overflow-wrap: break-word;
+hyphens: auto;
+text-align: justify;
+width: 100%;
+}
+.collectionText {
+
+  position: absolute;
+  top: 30%;
+}
+.me-links a:hover {
+  transform: scale(1.05);
+}
+.me-links img {
+  width: 18.5vh
+}
+.me-links {
+  margin-top: 3%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+}
+.chapters {
+  height: 120vh;
+  margin-top: 32vh;
+  
+}
+.chaptersMid {
+  height: 27%;
+  display: none;
+}
+.chaptersMidMobile {
+  height: 27%;
+display: flex;
+margin-right: -20%;
+}
+.chaptersHead {
+  width: 80%;
+  height: 25%;
+  padding-left: 17% ;
+}
+.chaptersHead h1 {
+  font-family: 'Gore';
+  color: #FFF;
+  font-size: 5vh;
+  font-weight: 100;
+  height: 4vh;
+}
+.chaptersHead h2 {
+  font-size: 1.5vh;
+  width: 120%;
+  color: #fff;
+  overflow-wrap: break-word;
+hyphens: auto;
+text-align: justify;
+  font-family: 'Futura';
+}
+.chaptersBottomRight {
+  display: none;
+}
+.circle2 {
+  stroke-dasharray: 1000; /* Half the circumference for half a circle */
+  stroke-dashoffset: 328; 
+  animation-delay: 1.5s;
+  transform: rotate(-3deg);
+  transform-origin: 40% 50%;
+  animation-name: rotateAndDraw;
+  animation-duration: 0.5s;
+}
+ul.customList li {
+  position: relative;
+  padding-left: 8%;
+  font-family: 'CheekyChic';
+  font-size: 1.6vh;
+  color: white;
+  margin-bottom: 2%;
+}
+
+ul.customList li.whiteDot::before {
+  content: '';
+  position: absolute;
+  left: 1.2%;
+  top: 50%;
+  width: 1vw;
+  height: 1vw;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+ul.customList li.greenCheck::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 1%;
+  color: white;
+  height: 2vw;
+  width: 2vw;
+  font-size: 1.2vh;
+  line-height: .8vw;
+  font-family: 'Futura' !important;
+  transform: translateY(-50%);
+  transition: background-color 0.5s 1s;
+  animation: checkFadeIn 8s forwards;
+}
+.fade-in {
+  
+}
+.chaptersBottom {
+  width: 100%;
+  display: flex;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  flex-direction: row;
+  margin-top: -10%;
+  padding-left: 20%;
+}
+.chaptersBottomLeft {
+  width: 60%;
+  align-items: flex-end;
+  
+
+
+}
+
+.chaptersBottom h1 {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.chaptersBottom h1 {
+  color: #fff;
+  font-family: 'Gore';
+  font-weight: 100;
+  font-size: 4vh;
+}
+.connected {
+  width: 100%;
+  height: 40vh;
+  margin-left: 11%;
+  padding-top: 0;
+  margin-top: -20%;
+
+  text-align: center;
+}
+.connected-text h1 {
+  font-family: 'Gore';
+  color: #fff;
+  font-weight: 100;
+  font-size: 4.5vh;
+
+}
+.connected-text h2 {
+  overflow-wrap: break-word;
+hyphens: auto;
+text-align: justify;
+margin: 0 auto; 
+width: 85%;
+margin-top: -2.5%;
+font-family: 'Futura';
+font-size: 1.3vh;
+color: white;
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12%;
+  justify-content: space-evenly;
+  width: 42%;
+  position: absolute;
+  left: 59%;
+  transform: translate(-50%, -50%);
+
+}
+.footer {
+  position: relative;
+  height: 63vh;
+  width: 120%;
+}
+.footer img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: -20%;
+  transform: translate(-50%);
+}
+
+.footerBottom {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  z-index: -1;
+  height: 9vh;
+  background-color: #0072d8;
+}
+.footerText {
+position: absolute;
+right: 15%;
+top: 10%
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.footerText h2 {
+  font-family: 'Balgin';
+  height: .2vh;
+  font-size: 1.5vh;
+  color: white;
+
+}
+.footerLogo {
+  position: relative;
+ 
+}
+.footerLogo img {
+  width: 10%;
+  margin-left: 43%;
+  margin-bottom: -11.6%;
+}
+
+  }
+  
